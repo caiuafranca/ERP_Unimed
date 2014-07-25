@@ -1,0 +1,29 @@
+<div><h1>Sistema Administrativo Unimed</h1>
+<ul>
+	<li>Acao 1</li>
+	<li>Acao 2</li>
+	<li>Acao 3</li>
+	<li>Acao 4</li>
+</ul>
+</div>
+
+<div>
+	<h3>Lista de Usuarios</h3>
+	<table style="width:300px">
+		<tr>
+			<td>Nome</td>
+			<td>Telefone</td>
+			<td>Username</td>
+			<td>Ação</td>
+		</tr>
+		<tr>
+			<% @users.each do |c| %>
+			<td><%= c.name %> </td>
+			<td><%= c.phone %> </td>
+			<td><%= c.username %></td>
+			<td><%= link_to "visualizar" %></td>
+		</tr>
+		<% end %>	
+	</table>
+
+</div>

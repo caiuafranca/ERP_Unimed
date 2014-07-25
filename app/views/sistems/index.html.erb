@@ -1,0 +1,25 @@
+<div>
+	<h1>Sistema Gestão de Sistemas</h1>
+	<ul>
+		<li>Acao 1</li>
+		<li>Acao 2</li>
+		<li>Acao 3</li>
+		<li>Acao 4</li>
+	</ul>
+</div>
+
+<div>
+	<h3>Lista de Tarefas</h3>
+	<table style="width:300px">
+		<tr>
+			<td>Nome</td>
+			<td>Descrição</td>
+		</tr>
+		<tr>
+			<% @sistems.each do |c| %>
+			<td><%= c.name %> </td>
+			<td><%= c.description %> </td>
+		</tr>
+		<% end %>	
+	</table>
+</div>

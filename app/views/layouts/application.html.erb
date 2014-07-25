@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unimed Natal Sistemas</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div style="background-color:#008000;text-align:left width:600; heigth:600">
+	<h1>Logo</h1>
+	<div>
+		<%= link_to "Home", root_path %>
+		<%= link_to "SISSISTEM", sistems_path %>
+		<%= link_to "SISGEUSER", users_path %>
+		<%= link_to "SISTASK", tasks_path %>
+		Sair
+	</div>
+</div>
+
+<div style="background-color:#D8DFD8;text-align:left width:600; heigth:600">
+<%= yield %>
+</div>
+
+<footer style="background-color:#D8DF;text-align:left width:600; heigth:600">
+	LOGO UNIMED - ATI Sistemas.
+</footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div><h1>Sistema Tasks</h1>
+<ul>
+	<li>Acao 1</li>
+	<li>Acao 2</li>
+	<li>Acao 3</li>
+	<li>Acao 4</li>
+</ul>
+</div>
+
+<div>
+	<h3>Lista de Tarefas</h3>
+	<table style="width:300px">
+		<tr>
+			<td font="bold">Nome</td>
+			<td>Descrição</td>
+			<td>Link</td>
+			<td>Link</td>
+			<td>Link</td>
+		</tr>
+		<tr>
+			<% @tasks.each do |task| %>
+			<td><%= task.title %> </td>
+			<td><%= task.description %> </td>
+			<td><%= link_to 'Show', task %></td>
+			<td><%= link_to 'Edit', edit_task_path(task) %></td>
+        	<td><%= link_to 'Excluir', task, method: :delete, data: 
+        							   { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>	
+		<%= link_to "Nova Tarefa", new_task_path %>
+	</table>
+</div>
